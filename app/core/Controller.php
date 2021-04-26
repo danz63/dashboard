@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Class parent untuk class - class lain dalam folder /app/controllers
+ */
 class Controller
 {
     public $db;

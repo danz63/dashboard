@@ -11,9 +11,8 @@ class Home extends Controller
             'full_name' => 'Miftah Hamdani',
             'email' => 'hamdan.miftah63@gmail.com',
             'address' => 'Karawang',
-            'title' => 'ASUUU'
+            'title' => 'Title'
         ];
-        view('admin/coba', $data);
-        // echo url('css/style.css');
+        view('admin/index', $data);
     }
 }

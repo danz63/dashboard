@@ -1,9 +1,22 @@
 <?php
+
+/**
+ * Class Utama Yang di inisialisasi oleh index.php di folder /public, dan menginisialiasi class lain
+ */
 class App
 {
+    /**
+     * Atribut class
+     */
     protected $controller = 'Home';
     protected $method = 'index';
     protected $params = [];
+
+    /**
+     * Require Class lain dan menginisialisasi class tersebut kedalam object
+     * @param none
+     * @return none
+     */
     public function __construct()
     {
         $url = $this->parse();
@@ -29,6 +42,10 @@ class App
         call_user_func_array([$this->controller, $this->method], $this->params);
     }
 
+    /**
+     * Parsing url
+     * @return array url
+     */
     public function parse()
     {
         if (isset($_GET['url'])) {
